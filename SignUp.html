@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <style>
+        * {margin:0; padding:0;}
+        li {list-style:none}
+        a {text-decoration:none; color: #333; display:block;}
+        .from {
+            width: 375px;
+            height: 935px;
+            background-color: #eee;
+            margin: 0 auto;
+        }
+        input:focus {outline:none;}
+        .from h2 {
+            text-align: center;
+            padding: 32px 0 33px 0;
+        }
+        .from .id {
+            width: 361px;
+            height: 260px;
+            border:0;
+            background-color: #fff;            
+            margin: 0 7px 25px;
+        }
+        .id label {
+            width: 100px;
+            display:inline-block;
+            position: absolute;
+            left: 99999px;
+        }
+        .id input {
+            width: 341px;
+            height: 38px;
+            margin: 20px 6px;
+            border: 0;
+            border-bottom: 5px solid #eee;           
+        }
+        
+        .from .privacy {
+            width: 361px;
+            height: 280px;
+            border:0;
+            background-color: #fff;
+            margin: 0 7px 29px;
+        }
+        .privacy .name label {
+            width: 100px;
+            display: inline-block;
+            position: absolute;
+            left: 9999px;
+        }
+        .privacy .name input {
+            width: 341px;
+            height: 38px;
+            margin: 20px 7px 10px;
+            border: 0;
+            border-bottom: 5px solid #eee; 
+        }
+        .privacy input[type="radio"] {
+            display:none;
+        }
+        .privacy input[type="radio"] + label {
+            display:inline-block;
+            width: 150px;
+            height: 38px;
+            line-height: 38px;
+            text-align:center;
+            border: 2px solid #eee;
+            margin: 10px 13px 0 10px;
+        }
+        .radio input[type="radio"]:checked + label {
+            border: 2px solid #ad0419;
+            background-color: #ad0419;
+            color: #fff;
+        }
+        .privacy .yb label {
+            width: 100px;
+            display: inline-block;
+            position: absolute;
+            left: 99999px;
+        }
+        .privacy .yb input {
+            display:inline-block;
+            width: 110px;
+            height: 38px;
+            border: 0;
+            border-bottom: 5px solid #eee;
+            margin: 20px 2px; 
+        }
+        .privacy .email label {
+            width: 100px;
+            display:inline-block;
+            position: absolute;
+            left: 99999px;
+        }
+        .privacy .email input {
+            width: 341px;
+            height: 38px;
+            border: 0;
+            border-bottom: 5px solid #eee;
+            margin: 20px 7px;
+        }
+        .from .phone {
+            width: 361px;
+            height: 130px;
+            border:0;
+            background-color: #fff;
+            margin: 0 7px 24px;
+        } 
+        .phone label {
+            width: 100px;
+            display:block;
+            position: absolute;
+            left: 9999px;
+        }
+        .phone input {
+            width: 341px;
+            height: 38px;
+            margin: 12px 6px;
+            border: 0;
+            border-bottom: 5px solid #eee;
+        }
+        button {
+            background-color: #fff;
+            border:0;
+            width: 361px;
+            height: 60px;
+            margin: 0 7px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        button:hover {
+            color: #fff;
+            background-color: #ad0419;
+        }
+    </style>
+</head>
+<body>
+    <div class="from">
+        <from action="" method="POST">
+            <h2 class="logo">
+                <a href="https://www.twosome.co.kr:7009/main.asp">
+                <img class="LOGOimg01" src="img/LOGOimg01.jpg" />
+                </a>
+            </h2><!-- logo end -->
+            <div class="id">
+                <div>
+                    <label>아이디</label>
+                    <input type="text" name="id" maxlength="15" placeholder="아이디" required>
+                </div>
+                <div>
+                    <label>비밀번호</label>
+                    <input type="password" id="pw" maxlength="15" placeholder="비밀번호" required>
+                </div>
+                <div>
+                    <label>비밀번호 재확인</label>
+                    <input type="password" id="pass" maxlength="15" placeholder="비밀번호 재확인" required>                
+                </div>
+            </div><!-- id end -->
+            <div class="privacy">
+                <div class="name">
+                    <label>이름</label>
+                    <input type="text" id="name" placeholder="이름" required> 
+                </div><!-- privacy end -->
+                <div class="radio">
+                    <input type="radio" id="ra" name="gender" value="man">
+                    <label for="ra">남자</label>
+                    <input type="radio" id="ra01" name="gender" value="woman">
+                    <label for="ra01">여자</label>
+                </div><!-- radio end -->
+                <div class="yb">
+                    <label>출생연도</label>
+                    <input type="text" id="yb" placeholder="년(4자리)" maxlength="4"  required>
+                    <input type="text" id="mondy" placeholder="월" maxlength="2" required>
+                    <input type="text" id="day" placeholder="일" maxlength="2" required>
+                </div><!-- yb end -->
+                <div class="email">
+                    <label>이메일</label>
+                    <input type="email" id="email"placeholder="이메일(선택)" >
+                </div><!-- email end -->    
+            </div><!-- privacy end -->
+            <div class="phone">
+                <label>+82</label>
+                </script>
+                <input type="tel" name="phone" id="telinput" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13" placeholder="예) 010-1234-5678" />
+                <div>
+                    <label>인증번호</label>
+                    <input type="text" id="" placeholder="인증번호" required>
+                </div>
+            </div><!-- phone end -->
+            <div class="btn">
+                <button><a href="#">가입하기</a></button>
+            </div>
+        </from>
+    </div>
+</body>
+</html>
